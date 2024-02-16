@@ -12,16 +12,15 @@ public class Person {
     }
 
     public String hello() {
-        StringBuilder greeting = new StringBuilder();
+        String greeting = new String();
         System.out.println("Hello, my name is " +name+ ", my gender is "+gender+ " and I am "+age+ " years old. My interests are ");
 
         for (int i = 0; i < interests.length; i++) {
-            greeting.append(interests[i]);
+            greeting += interests[i];
             if (i < interests.length - 1) {
-                greeting.append(", ");
+                greeting += ", ";
             }
         }
-            greeting.append(".");
             return greeting.toString();
     }
 
